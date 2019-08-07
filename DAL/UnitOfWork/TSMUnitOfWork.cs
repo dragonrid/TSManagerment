@@ -16,6 +16,7 @@ namespace DAL.UnitOfWork
 
         public TSMUnitOfWork(string connectionString)
         {
+            var ensureDLLIsCopied = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
             _tsmContext = new TSMEntities(connectionString);
             _userRepository = new UserRepository();
             _userRepository.Init(_tsmContext);

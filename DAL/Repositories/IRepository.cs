@@ -13,7 +13,6 @@ namespace DAL.Repositories
     {
         void Init(TSMEntities tsmEntity);
         List<T> getList();
-        T getSingle();
         T getByName<TKey>(Expression<Func<T, TKey>> entityKey, string value);
         T getByID(decimal id);
         bool insertRecord(T entity);

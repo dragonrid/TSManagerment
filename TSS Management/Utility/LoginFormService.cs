@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Entities
+namespace TSS_Management.Utility
 {
-    public interface IEntity
+    class LoginFormService
     {
-        decimal Id { get; set; }
+
     }
 }

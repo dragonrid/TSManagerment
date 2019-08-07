@@ -26,10 +26,6 @@ namespace DAL.Repositories
         {
             return _tsmEntity.Set<T>().ToList();
         }
-        public T getSingle()
-        {
-            return null;
-        }
         public T getByName<TKey>(Expression<Func<T, TKey>> entityKey,string value)
         {
             return null;
