@@ -13,7 +13,7 @@ namespace Services
 
         protected ITSMUnitOfWork getDB()
         {
-            return new TSMUnitOfWork(connectionString);
+            return new TSMUnitOfWork();
         }
     }
 }

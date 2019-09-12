@@ -1,4 +1,5 @@
-﻿using Services;
+﻿using IOC;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,7 @@ namespace TSS_Management
 
         private void Main_Load(object sender, EventArgs e)
         {
-            UserServices userServices = new UserServices();
+            UserServices userServices = Locator.GetT<UserServices>();
             dataGridView1.DataSource = userServices.getAllUser();
         }
     }

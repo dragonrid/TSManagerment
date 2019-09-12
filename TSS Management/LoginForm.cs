@@ -1,4 +1,5 @@
-﻿using Services;
+﻿using IOC;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,9 +58,11 @@ namespace TSS_Management
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            UserServices userServices = new UserServices();
             SaveConfig();
             ConfigurationServices.Init(Properties.Settings.Default.servername, Properties.Settings.Default.dbname, Properties.Settings.Default.passsql, Properties.Settings.Default.usersql);
+            UserServices userServices = Locator.GetT<UserServices>();
+            
+            
             if (userServices.checkLogin(tbx_user_name.Text, tbx_password.Text))
             {
                 Main main = new Main();

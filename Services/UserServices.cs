@@ -6,49 +6,55 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Entities;
+using DAL.UnitOfWork;
 
 namespace Services
 {
     public class UserServices : BaseServices, IUserServices
     {
+        private ITSMUnitOfWork context;
+        public UserServices(ITSMUnitOfWork tSMUnitOfWork)
+        {
+            context = tSMUnitOfWork;
+        }
         public bool deleteRecord(User user)
         {
-            return getDB().userRepository.deleteRecord(user);
+            return context.userRepository.deleteRecord(user);
         }
 
         public bool deleteRecordByID(decimal id)
         {
-            return getDB().userRepository.deleteRecordByID(id);
+            return context.userRepository.deleteRecordByID(id);
         }
 
         public bool deleteRecordByName(string userName)
         {
-            return getDB().userRepository.deleteRecordByName(userName);
+            return context.userRepository.deleteRecordByName(userName);
         }
 
         public User getByID(decimal id)
         {
-            return getDB().userRepository.getByID(id);
+            return context.userRepository.getByID(id);
         }
 
         public User getByName(string userName)
         {
-            return getDB().userRepository.getByName(userName);
+            return context.userRepository.getByName(userName);
         }
 
         public List<User> getList()
         {
-            return getDB().userRepository.getList();
+            return context.userRepository.getList();
         }
 
         public bool insertRecord(User user)
         {
-            return getDB().userRepository.insertRecord(user);
+            return context.userRepository.insertRecord(user);
         }
 
         public bool updateRecord(User user)
         {
-            return getDB().userRepository.updateRecord(user);
+            return context.userRepository.updateRecord(user);
         }
         public bool checkLogin(string userName, string password)
         {

@@ -32,9 +32,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.chk_thiet_lap = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.tbx_db_name = new System.Windows.Forms.TextBox();
             this.tbx_user_sql = new System.Windows.Forms.TextBox();
             this.tbx_pass_sql = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,8 +52,8 @@
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,16 +97,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thiết lập thông số kết nối";
             // 
-            // groupBox2
+            // chk_thiet_lap
             // 
-            this.groupBox2.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 469);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(324, 129);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Đăng nhập";
+            this.chk_thiet_lap.AutoSize = true;
+            this.chk_thiet_lap.Location = new System.Drawing.Point(138, 0);
+            this.chk_thiet_lap.Name = "chk_thiet_lap";
+            this.chk_thiet_lap.Size = new System.Drawing.Size(15, 14);
+            this.chk_thiet_lap.TabIndex = 0;
+            this.chk_thiet_lap.UseVisualStyleBackColor = true;
+            this.chk_thiet_lap.CheckedChanged += new System.EventHandler(this.chk_thiet_lap_CheckedChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -131,16 +130,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(318, 111);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // chk_thiet_lap
-            // 
-            this.chk_thiet_lap.AutoSize = true;
-            this.chk_thiet_lap.Location = new System.Drawing.Point(138, 0);
-            this.chk_thiet_lap.Name = "chk_thiet_lap";
-            this.chk_thiet_lap.Size = new System.Drawing.Size(15, 14);
-            this.chk_thiet_lap.TabIndex = 0;
-            this.chk_thiet_lap.UseVisualStyleBackColor = true;
-            this.chk_thiet_lap.CheckedChanged += new System.EventHandler(this.chk_thiet_lap_CheckedChanged);
             // 
             // label1
             // 
@@ -218,6 +207,17 @@
             this.tbx_pass_sql.Size = new System.Drawing.Size(213, 20);
             this.tbx_pass_sql.TabIndex = 7;
             this.tbx_pass_sql.UseSystemPasswordChar = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tableLayoutPanel3);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(3, 469);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(324, 129);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Đăng nhập";
             // 
             // tableLayoutPanel3
             // 
@@ -305,9 +305,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);

@@ -94,6 +94,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IOC\IOC.csproj">
+      <Project>{a09ada2e-fee6-406b-9ef1-662385f4d477}</Project>
+      <Name>IOC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{ce0a9b59-3c61-45cf-8d77-02874b60526b}</Project>
       <Name>Services</Name>

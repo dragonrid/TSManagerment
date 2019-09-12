@@ -11,5 +11,7 @@ namespace DAL.UnitOfWork
     {
         UserRepository userRepository { get; }
         CustomerRepository customerRepository { get; }
+
+        void SaveChange();
     }
 }
